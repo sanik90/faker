@@ -44,14 +44,18 @@ Contents
   - [Faker::Commerce](doc/commerce.md)
   - [Faker::Company](doc/company.md)
   - [Faker::Compass](doc/compass.md)
+  - [Faker::Currency](doc/currency.md)
   - [Faker::Crypto](doc/crypto.md)
   - [Faker::Date](doc/date.md)
   - [Faker::Demographic](doc/demographic.md)
   - [Faker::Dessert](doc/dessert.md)
+  - [Faker::Dog](doc/dog.md)
   - [Faker::DragonBall](doc/dragon_ball.md)
   - [Faker::DrWho](doc/dr_who.md)
+  - [Faker::Dune](doc/dune.md)
   - [Faker::Educator](doc/educator.md)
   - [Faker::ElderScrolls](doc/elder_scrolls.md)
+  - [Faker::Fallout](doc/fallout.md)
   - [Faker::FamilyGuy](doc/family_guy.md)
   - [Faker::File](doc/file.md)
   - [Faker::Fillmurray](doc/fillmurray.md)
@@ -67,6 +71,7 @@ Contents
   - [Faker::HitchhikersGuideToTheGalaxy](doc/hitchhikers_guide_to_the_galaxy.md)
   - [Faker::Internet](doc/internet.md)
   - [Faker::Job](doc/job.md)
+  - [Faker::Kpop](doc/kpop.md)
   - [Faker::LeagueOfLegends](doc/league_of_legends.md)
   - [Faker::LordOfTheRings](doc/lord_of_the_rings.md)
   - [Faker::LoremPixel](doc/lorem_pixel.md)
@@ -99,6 +104,8 @@ Contents
   - [Faker::Space](doc/space.md)
   - [Faker::StarTrek](doc/star_trek.md)
   - [Faker::StarWars](doc/star_wars.md)
+  - [Faker::String](doc/string.md)
+  - [Faker::Stripe](doc/stripe.md)
   - [Faker::Superhero](doc/superhero.md)
   - [Faker::Team](doc/team.md)
   - [Faker::TheFreshPrinceOfBelAir](doc/the_fresh_prince_of_bel_air.md)
@@ -106,10 +113,12 @@ Contents
   - [Faker::Time](doc/time.md)
   - [Faker::TwinPeaks](doc/twin_peaks.md)
   - [Faker::Twitter](doc/twitter.md)
+  - [Faker::Types](doc/types.md)
   - [Faker::UmphreysMcgee](doc/umphreys_mcgee.md)
   - [Faker::University](doc/university.md)
   - [Faker::Vehicle](doc/vehicle.md)
   - [Faker::VentureBros](doc/venture_bros.md)
+  - [Faker::VForVendetta](doc/v_for_vendetta.md)
   - [Faker::Witcher](doc/witcher.md)
   - [Faker::WorldOfWarcraft](doc/world_of_warcraft.md)
   - [Faker::Zelda](doc/zelda.md)
@@ -126,7 +135,7 @@ gem install faker
 Note: if you are getting a `uninitialized constant Faker::[some_class]` error, your version of the gem is behind the one documented here. To make sure that your gem is the one documented here, change the line in your gemfile to:
 
 ```ruby
-gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 ```
 
 ## Usage
@@ -153,12 +162,6 @@ that have been returned, for example between tests.
 ```ruby
 Faker::Name.unique.clear # Clears used values for Faker::Name
 Faker::UniqueGenerator.clear # Clears used values for all generators
-```
-It is also possible to add a random number to the end of faker data to increase the
-likelihood of unique data being generated. For example:
-
-```ruby
-Faker::Name.unique + ((1..1000).to_a).sample
 ```
 
 ### Deterministic Random
