@@ -3,19 +3,18 @@ module Faker
     require 'time'
     attr_reader :name,
                 :first_name,
-                :last_name
+                :last_name,
+                :email
 
-    def initialize
-      @name = "#{Name.first_name} #{Name.last_name}"
-      @first_name = name.split(' ').first
-      @last_name = name.split(' ').last
+    def initialize(name: nil, email: nil)
+      @name = name || "#{Name.first_name} #{Name.last_name}"
+      @email = email || Internet.safe_email(self.name)
+      @first_name, @last_name = self.name.split
     end
 
     class << self
-      def google
-        uid = Number.number(9)
-        auth = Omniauth.new()
-        email = "#{auth.first_name.downcase}@example.com"
+      def google(name: nil, email: nil, uid: Number.number(9))
+        auth = Omniauth.new(name: name, email: email)
         {
           provider: "google_oauth2",
           uid: uid,
@@ -23,7 +22,7 @@ module Faker
             name: auth.name,
             first_name: auth.first_name,
             last_name: auth.last_name,
-            email: email,
+            email: auth.email,
             image: image
           },
           credentials:  {
@@ -35,7 +34,7 @@ module Faker
           extra: {
             raw_info: {
               sub:  uid,
-              email: email,
+              email: auth.email,
               email_verified: random_boolean,
               name: auth.name,
               given_name: auth.first_name,
@@ -54,7 +53,7 @@ module Faker
             "email_verified" => "true",
             "sub" => Number.number(28).to_s,
             "azp" => "APP_ID",
-            "email" => email,
+            "email" => auth.email,
             "aud" => "APP_ID",
             "iat" => Number.number(10),
             "exp" => Time.forward.to_i.to_s,
@@ -63,16 +62,14 @@ module Faker
         }
       end
 
-      def facebook
-        uid = Number.number(7)
-        auth = Omniauth.new()
-        username = "#{auth.first_name.downcase[0]}#{auth.last_name.downcase}"
-        email = "#{auth.first_name.downcase}@#{auth.last_name.downcase}.com"
+      def facebook(name: nil, email: nil, username: nil, uid: Number.number(7))
+        auth = Omniauth.new(name: name, email: email)
+        username ||= "#{auth.first_name.downcase[0]}#{auth.last_name.downcase}"
         {
           provider: "facebook",
           uid: uid,
           info: {
-            email: email,
+            email: auth.email,
             name: auth.name,
             first_name: auth.first_name,
             last_name: auth.last_name,
@@ -97,7 +94,7 @@ module Faker
                 name: city_state
               },
               gender: gender,
-              email: email,
+              email: auth.email,
               timezone: timezone,
               locale: 'en_US',
               verified: random_boolean,
@@ -107,23 +104,23 @@ module Faker
         }
       end
 
-      def twitter
-        uid = Number.number(6)
-        auth = Omniauth.new()
+      def twitter(name: nil, nickname: nil, uid: Number.number(6))
+        auth = Omniauth.new(name: name)
+        nickname ||= auth.name.downcase.gsub(' ', '')
         location = city_state
         description = Lorem.sentence
         {
           provider: "twitter",
           uid: uid,
           info: {
-            nickname: auth.name.downcase.gsub(' ', ''),
+            nickname: nickname,
             name: auth.name,
             location: location,
             image: image,
             description: description,
             urls: {
               Website: nil,
-              Twitter: "https://twitter.com/#{auth.name.downcase.gsub(' ', '')}"
+              Twitter: "https://twitter.com/#{nickname}"
             }
           },
           credentials: {
@@ -180,12 +177,10 @@ module Faker
         }
       end
 
-      def linkedin
-        uid = Number.number(6)
-        auth = Omniauth.new()
+      def linkedin(name: nil, email: nil, uid: Number.number(6))
+        auth = Omniauth.new(name: name, email: email)
         first_name = auth.first_name.downcase
         last_name = auth.last_name.downcase
-        email = "#{first_name}@#{last_name}.com"
         location = city_state
         description = Lorem.sentence
         token = Crypto.md5
@@ -197,7 +192,7 @@ module Faker
           "uid" => uid,
           "info" => {
             "name" => auth.name,
-            "email" => email,
+            "email" => auth.email,
             "nickname" => auth.name,
             "first_name" => auth.first_name,
             "last_name" => auth.last_name,
@@ -245,22 +240,17 @@ module Faker
         }
       end
 
-      def github
-        uid = Number.number(8)
-        auth = Omniauth.new()
-        first_name = auth.first_name.downcase
-        last_name  = auth.last_name.downcase
-        login = "#{first_name}-#{last_name}"
+      def github(name: nil, email: nil, uid: Number.number(8))
+        auth = Omniauth.new(name: name, email: email)
+        login = auth.name.downcase.gsub(' ','-')
         html_url = "https://github.com/#{login}"
         api_url = "https://api.github.com/users/#{login}"
-        email = "#{first_name}@example.com"
-
         {
           provider: "github",
           uid: uid,
           info: {
             nickname: login,
-            email: email,
+            email: auth.email,
             name: auth.name,
             image: image,
             urls:{
@@ -294,7 +284,7 @@ module Faker
               company: nil,
               blog: nil,
               location: city_state,
-              email: email,
+              email: auth.email,
               hireable: nil,
               bio: nil,
               public_repos: random_number_from_range(1..1000),
@@ -306,7 +296,6 @@ module Faker
             }
           }
         }
-
       end
 
       private
@@ -334,7 +323,6 @@ module Faker
         def random_boolean
           shuffle([true, false]).pop
         end
-
     end
   end
 end
