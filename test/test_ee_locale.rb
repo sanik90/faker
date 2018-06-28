@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require File.expand_path(File.dirname(__FILE__) + '/test_helper.rb')
+require_relative 'test_helper'
 
 class TestEeLocale < Test::Unit::TestCase
   def setup
@@ -46,6 +46,12 @@ class TestEeLocale < Test::Unit::TestCase
   def test_ee_internet_methods
     assert Faker::Internet.free_email.is_a? String
     assert Faker::Internet.domain_suffix.is_a? String
+  end
+
+  def test_ee_invoice_methods
+    assert Faker::Invoice.creditor_reference.is_a? String
+    assert Faker::Invoice.reference.is_a? String
+    assert Faker::Invoice.reference('4106453482608858924').is_a? String
   end
 
   def test_ee_name_methods

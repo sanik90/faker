@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/test_helper.rb'
+require_relative 'test_helper'
 
 class TestFakerLorem < Test::Unit::TestCase
   def setup
@@ -104,6 +104,10 @@ class TestFakerLorem < Test::Unit::TestCase
     assert(exact.length == 500)
     assert(range.length >= 250 && range.length <= 500)
     assert(array.length == 250 || array.length == 500)
+  end
+
+  def test_multibyte
+    assert @tester.multibyte.is_a? String
   end
 
   def test_paragraph_char_count
