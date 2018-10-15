@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-mydir = __dir__
-
 begin
   require 'psych'
 end
@@ -9,8 +7,9 @@ end
 require 'i18n'
 require 'set' # Fixes a bug in i18n 0.6.11
 
-I18n.load_path += Dir[File.join(mydir, 'locales', '**/*.yml')]
-I18n.reload! if I18n.backend.initialized?
+Dir.glob(File.join(File.dirname(__FILE__), 'helpers', '*.rb')).sort.each { |file| require file }
+
+I18n.backend = I18n::Backend::Chain.new(I18n.backend, Faker::I18nBackend.new)
 
 module Faker
   class Config
@@ -44,6 +43,7 @@ module Faker
       ## by default numerify results do not start with a zero
       def numerify(number_string, leading_zero: false)
         return number_string.gsub(/#/) { rand(10).to_s } if leading_zero
+
         number_string.sub(/#/) { rand(1..9).to_s }.gsub(/#/) { rand(10).to_s }
       end
 
@@ -157,14 +157,19 @@ module Faker
         # Super-simple fallback -- fallback to en if the
         # translation was missing.  If the translation isn't
         # in en either, then it will raise again.
-        I18n.translate(*args.push(opts))
+        disable_enforce_available_locales do
+          I18n.translate(*args.push(opts))
+        end
       end
 
       # Executes block with given locale set.
       def with_locale(tmp_locale = nil)
         current_locale = Faker::Config.own_locale
         Faker::Config.locale = tmp_locale
-        I18n.with_locale(tmp_locale) { yield }
+
+        disable_enforce_available_locales do
+          I18n.with_locale(tmp_locale) { yield }
+        end
       ensure
         Faker::Config.locale = current_locale
       end
@@ -229,12 +234,18 @@ module Faker
           0
         end
       end
+
+      def disable_enforce_available_locales
+        old_enforce_available_locales = I18n.enforce_available_locales
+        I18n.enforce_available_locales = false
+        yield
+      ensure
+        I18n.enforce_available_locales = old_enforce_available_locales
+      end
     end
   end
 end
 
-Dir.glob(File.join(File.dirname(__FILE__), 'faker', '*.rb')).sort.each { |f| require f }
-
-require 'helpers/char'
-require 'helpers/unique_generator'
-require 'helpers/base58'
+%w[faker faker/creature faker/games faker/movies].each do |path|
+  Dir.glob(File.join(File.dirname(__FILE__), path, '*.rb')).sort.each { |file| require file }
+end
