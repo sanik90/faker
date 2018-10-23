@@ -3,6 +3,9 @@
 ## HEAD Unreleased
 
 ### Bug/Fixes
+- [PR #1425](https://github.com/stympy/faker/pull/1425) NHS: fix occasional bad numbers [@ChaoticBoredom](https://github.com/ChaoticBoredom)
+- [PR #1421](https://github.com/stympy/faker/pull/1421) Faker::Internet.user_name can't handle UTF-8 arguments [@ivanoblomov](https://github.com/ivanoblomov)
+- [PR #1423](https://github.com/stympy/faker/pull/1423) Add missing locale tests - Part II [@vbrazo](https://github.com/vbrazo)
 - [PR #1389](https://github.com/stympy/faker/pull/1389) Load faker I18n using custom backend chaining [@pjohnmeyer](https://github.com/pjohnmeyer)
 - [PR #1384](https://github.com/stympy/faker/pull/1384) Quick number method bugfix [@vbrazo](https://github.com/vbrazo)
 - [PR #1377](https://github.com/stympy/faker/pull/1377) Fallback translation without available locales enforcement [@deivid-rodriguez](https://github.com/deivid-rodriguez)
@@ -15,6 +18,8 @@
 - [PR #1310](https://github.com/stympy/faker/pull/1310) Add alias for middle_name and remove locale [@vbrazo](https://github.com/vbrazo)
 
 ### Chores
+- [PR #1420](https://github.com/stympy/faker/pull/1420) Add Faker::JapaneseMedia namespace [@boardfish](https://github.com/boardfish)
+- [PR #1411](https://github.com/stympy/faker/pull/1411) Add several missing locales [@vbrazo](https://github.com/vbrazo)
 - [PR #1403](https://github.com/stympy/faker/pull/1403) Faker::SouthPark => Faker::Movies::SouthPark [@vbrazo](https://github.com/vbrazo)
 - [PR #1401](https://github.com/stympy/faker/pull/1401) Faker::GratefulDead => Faker::Movies::GratefulDead [@vbrazo](https://github.com/vbrazo)
 - [PR #1362](https://github.com/stympy/faker/pull/1362) Faker::Types minor cleanup [@stephengroat](https://github.com/stephengroat)
@@ -23,9 +28,18 @@
 - [PR #372](https://github.com/stympy/faker/pull/372) Add test_password_could_achieve_max_length [@oleksii-ti](https://github.com/oleksii-ti)
 
 ### Deprecation
+- [PR #1412](https://github.com/stympy/faker/pull/1412) Add Faker::Games namespace [@ChaoticBoredom](https://github.com/ChaoticBoredom)
+  - Deprecates `::Dota`, `::ElderScrolls`, `::Fallout`, `::LeagueOfLegends`, `::Myst`, `::Overwatch`, `::Pokemon`, `::Witcher`, `::WorldOfWarcraft` and `::Zelda`
+- [PR #1424](https://github.com/stympy/faker/pull/1424) Add Faker::Creature namespace [@ChaoticBoredom](https://github.com/ChaoticBoredom)
+  - Deprecates `::Cat` and `::Dog`
+- [PR #1420](https://github.com/stympy/faker/pull/1420) Add Faker::JapaneseMedia namespace [@boardfish](https://github.com/boardfish)
+  - Deprecates `::DragonBall`, `::OnePiece` and `::SwordArtOnline`
 - [PR #803](https://github.com/stympy/faker/pull/803) Modify Faker::Educator, Fix #576 [@ghbooth12](https://github.com/ghbooth12)
 
 ### Documentation
+- [PR #1243](https://github.com/stympy/faker/pull/1243) Add image file method to placeholdit [@nicolas-brousse](https://github.com/nicolas-brousse)
+- [PR #1419](https://github.com/stympy/faker/pull/1419) Update CONTRIBUTING.md [@vbrazo](https://github.com/vbrazo)
+- [PR #1414](https://github.com/stympy/faker/pull/1414) Fixing spelling mistake in Docs for Vehicle [@snoozins](https://github.com/snoozins)
 - [PR #1408](https://github.com/stympy/faker/pull/1408) Add Verbs example to README [@matheusteixeira](https://github.com/matheusteixeira)
 - [PR #1380](https://github.com/stympy/faker/pull/1380) Update year in License.txt [@dnamsons](https://github.com/dnamsons)
 - [PR #1364](https://github.com/stympy/faker/pull/1364) Update readme for Faker::Code to fix typo [@matt297](https://github.com/matt297)
@@ -36,6 +50,11 @@
 - [PR #1329](https://github.com/stympy/faker/pull/1329) Update docs on behavior of price [@softwaregravy](https://github.com/softwaregravy)
 
 ### Feature Request
+- [PR #1426](https://github.com/stympy/faker/pull/1426) Add Faker::PhoneNumber.country_code [@AmrAdelKhalil](https://github.com/AmrAdelKhalil)
+- [PR #1427](https://github.com/stympy/faker/pull/1427) Add Faker::Games::SuperSmashBros [@boardfish](https://github.com/boardfish)
+- [PR #1410](https://github.com/stympy/faker/pull/1410) Add Faker::Vehicle.singapore_license_plate [@anonoz](https://github.com/anonoz)
+- [PR #1422](https://github.com/stympy/faker/pull/1422) Add Faker::Games::SonicTheHedgehog [@boardfish](https://github.com/boardfish)
+- [PR #1413](https://github.com/stympy/faker/pull/1413) Add Faker::Games::Heroes [@tangens](https://github.com/tangens)
 - [PR #1409](https://github.com/stympy/faker/pull/1409) Add DC Comics titles [@matheusteixeira](https://github.com/matheusteixeira)
 - [PR #1400](https://github.com/stympy/faker/pull/1400) Add Faker::Movies::Ghostbusters [@eddorre](https://github.com/eddorre)
 - [PR #1399](https://github.com/stympy/faker/pull/1399) Add Faker::Games::HeroesOfTheStorm [@illsism](https://github.com/illsism)
@@ -73,6 +92,8 @@
 - [PR #1246](https://github.com/stympy/faker/pull/1246) Store list of generators with enabled uniqueness for faster clear [@MarcPer](https://github.com/MarcPer)
 
 ### Update/add locales
+- [PR #1428](https://github.com/stympy/faker/pull/1428) Add Faker::Games::SonicTheHedgehog.game [@boardfish](https://github.com/boardfish)
+- [PR #1415](https://github.com/stympy/faker/pull/1415) Add new Overwatch items [@lucasqueiroz](https://github.com/lucasqueiroz)
 - [PR #1407](https://github.com/stympy/faker/pull/1407) Add more data for Faker::Friends [@JIntrocaso](https://github.com/JIntrocaso)
 - [PR #1402](https://github.com/stympy/faker/pull/1402) Update heroes_of_the_storm.yml [@eddorre](https://github.com/eddorre)
 - [PR #1398](https://github.com/stympy/faker/pull/1398) Fix female_first_name and male_first_name [@vbrazo](https://github.com/vbrazo)
