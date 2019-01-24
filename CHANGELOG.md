@@ -3,6 +3,7 @@
 ## HEAD Unreleased
 
 ### Bug/Fixes
+- [PR #1512](https://github.com/stympy/faker/pull/1512) Fix numerical part of Dutch postcode [@tilsammans](https://github.com/tilsammans)
 - [PR #1477](https://github.com/stympy/faker/pull/1477) Fixed bank account length [@jguthrie100](https://github.com/jguthrie100)
 - [PR #1494](https://github.com/stympy/faker/pull/1494) Fix Faker::Internet.ip_v4_address to include all IP ranges [@lucasqueiroz](https://github.com/lucasqueiroz)
 - [PR #1456](https://github.com/stympy/faker/pull/1456) fix: omit . from slug [@ivanoblomov](https://github.com/ivanoblomov)
@@ -60,6 +61,7 @@
 - [PR #803](https://github.com/stympy/faker/pull/803) Modify Faker::Educator, Fix #576 [@ghbooth12](https://github.com/ghbooth12)
 
 ### Documentation
+- [PR #1513](https://github.com/stympy/faker/pull/1513) Fix typo in Faker::Code documentation [@iox](https://github.com/iox)
 - [PR #1497](https://github.com/stympy/faker/pull/1497) add TV Shows to table of contents [@SpyMaster356](https://github.com/SpyMaster356)
 - [PR #1488](https://github.com/stympy/faker/pull/1488) Fix unreleased docs [@vbrazo](https://github.com/vbrazo)
 - [PR #1462](https://github.com/stympy/faker/pull/1462) Fix documentation on Faker::Avatar [@mrstebo](https://github.com/mrstebo)
@@ -133,6 +135,7 @@
 - [PR #1246](https://github.com/stympy/faker/pull/1246) Store list of generators with enabled uniqueness for faster clear [@MarcPer](https://github.com/MarcPer)
 
 ### Update/add locales
+- [PR #1514](https://github.com/stympy/faker/pull/1514) Distinguish between 'brand' and 'name' [@iwaim](https://github.com/iwaim)
 - [PR #1509](https://github.com/stympy/faker/pull/1509) Fix Faker::Address.country_by_code [@IlyasValiullov](https://github.com/IlyasValiullov)
 - [PR #1492](https://github.com/stympy/faker/pull/1492) Fix abbreviation for Osten [@sonOfRa](https://github.com/sonOfRa)
 - [PR #1499](https://github.com/stympy/faker/pull/1499) Adds some items on pt-BR locales seniority and education levels. And removes duplicated items from cities list. [@ramonlg](https://github.com/ramonlg)
