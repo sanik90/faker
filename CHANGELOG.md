@@ -3,6 +3,35 @@
 ## HEAD Unreleased
 
 ### Bug/Fixes
+
+### Chores
+
+### Deprecation
+
+### Documentation
+
+### Feature Request
+
+### Suggestion
+
+### Update/add locales
+
+------------------------------------------------------------------------------
+
+## [v1.9.3](https://github.com/stympy/faker/tree/v1.9.2) (2019-02-12)
+
+[Full Changelog](https://github.com/stympy/faker/compare/v1.9.2...v1.9.3)
+
+### Bug/Fixes
+
+- [PR #1535](https://github.com/stympy/faker/pull/1535) Fix I18n bug [@vbrazo](https://github.com/vbrazo)
+
+------------------------------------------------------------------------------
+
+## [v1.9.2](https://github.com/stympy/faker/tree/v1.9.2) (2019-02-11)
+[Full Changelog](https://github.com/stympy/faker/compare/v1.9.1...v1.9.2)
+
+### Bug/Fixes
 - [PR #1512](https://github.com/stympy/faker/pull/1512) Fix numerical part of Dutch postcode [@tilsammans](https://github.com/tilsammans)
 - [PR #1477](https://github.com/stympy/faker/pull/1477) Fixed bank account length [@jguthrie100](https://github.com/jguthrie100)
 - [PR #1494](https://github.com/stympy/faker/pull/1494) Fix Faker::Internet.ip_v4_address to include all IP ranges [@lucasqueiroz](https://github.com/lucasqueiroz)
@@ -142,7 +171,7 @@
 - [PR #1501](https://github.com/stympy/faker/pull/1501) fix asajj_ventress alternate name [@ethan-dowler](https://github.com/ethan-dowler)
 - [PR #1502](https://github.com/stympy/faker/pull/1502) Add support for Armenian language [@hovikman](https://github.com/hovikman)
 - [PR #1486](https://github.com/stympy/faker/pull/1486) Added some professions in company.yml [@ReneIvanov](https://github.com/ReneIvanov)
-- [PR #1474](https://github.com/stympy/faker/pull/1474) Fr format and translation [@maxime-lenne](https://github.com/maxime-lenne) 
+- [PR #1474](https://github.com/stympy/faker/pull/1474) Fr format and translation [@maxime-lenne](https://github.com/maxime-lenne)
 - [PR #1468](https://github.com/stympy/faker/pull/1468) Update "Black Pink" to "Blackpink" [@agungyuliaji](https://github.com/agungyuliaji)
 - [PR #1464](https://github.com/stympy/faker/pull/1464) Add dog breed for Japanese [@yizknn](https://github.com/yizknn)
 - [PR #1461](https://github.com/stympy/faker/pull/1461) Add Orphea to heroes of the storm locale file. [@eddorre](https://github.com/eddorre)
