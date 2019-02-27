@@ -30,6 +30,7 @@ development.
     - [Movies](#movies)
     - [Music](#music)
     - [Quotes](#quotes)
+    - [Sports](#sports)
     - [TV Shows](#tv-shows)
 - [Customization](#customization)
 - [Contributing](#contributing)
@@ -48,7 +49,7 @@ development.
 ```bash
 gem install faker
 ```
-Note: if you are getting a `uninitialized constant Faker::[some_class]` error, your version of the gem is behind the one documented here. To make sure that your gem is the one documented here, change the line in your gemfile to:
+Note: if you are getting a `uninitialized constant Faker::[some_class]` error, your version of the gem is behind the one documented here. To make sure that your gem is the one documented here, change the line in your Gemfile to:
 
 ```ruby
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
@@ -246,7 +247,6 @@ gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
   - [Faker::Movie](doc/unreleased/movies/movie.md)
   - [Faker::Movies::BackToTheFuture](doc/unreleased/movies/back_to_the_future.md)
   - [Faker::Movies::Ghostbusters](doc/unreleased/movies/ghostbusters.md)
-  - [Faker::Movies::GratefulDead](doc/unreleased/movies/grateful_dead.md)
   - [Faker::Movies::HarryPotter](doc/unreleased/movies/harry_potter.md)
   - [Faker::Movies::HitchhikersGuideToTheGalaxy](doc/unreleased/movies/hitchhikers_guide_to_the_galaxy.md)
   - [Faker::Movies::Hobbit](doc/unreleased/movies/hobbit.md)
@@ -258,6 +258,7 @@ gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
 ### Music
   - [Faker::Music](doc/unreleased/music/music.md)
+  - [Faker::Music::GratefulDead](doc/music/grateful_dead.md)
   - [Faker::Music::Phish](doc/unreleased/music/phish.md)
   - [Faker::Music::RockBand](doc/unreleased/music/rock_band.md)
   - [Faker::Music::UmphreysMcgee](doc/unreleased/music/umphreys_mcgee.md)
@@ -265,6 +266,10 @@ gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 ### Quotes
   - [Faker::Quote](doc/unreleased/quotes/quote.md)
   - [Faker::Quotes::Shakespeare](doc/unreleased/quotes/shakespeare.md)
+
+### Sports
+  - [Faker::Sports::Basketball](doc/unreleased/sports/basketball.md)
+  - [Faker::Sports::Football](doc/unreleased/sports/football.md)
 
 ### Tv Shows
   - [Faker::TvShows::AquaTeenHungerForce](doc/unreleased/tv_shows/aqua_teen_hunger_force.md)
