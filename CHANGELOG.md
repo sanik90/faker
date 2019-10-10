@@ -1,6 +1,19 @@
 # Change Log
 
-## Unreleased
+## [v2.6.0](https://github.com/faker-ruby/faker/tree/v2.6.0) (2019-10-10)
+
+This version:
+- adds `Faker::Date.in_date_period`
+- adds `Faker::WorldCup` YARD docs
+- updates local dependencies
+
+## Documentation
+
+- [PR #1789](https://github.com/faker-ruby/faker/pull/1789) Faker::WorldCup YARD docs [@ashishra0](https://github.com/ashishra0)
+
+## Feature Request
+
+- [PR #1755](https://github.com/faker-ruby/faker/pull/1755) Add Faker::Date.in_date_period [@AmrAdelKhalil](https://github.com/AmrAdelKhalil)
 
 ## Update local dependencies
 
