@@ -1,8 +1,36 @@
 # Change Log
 
+## [v2.8.1](https://github.com/faker-ruby/faker/tree/v2.8.1) (2019-12-06)
+
+## Bug/Fixes
+
+- [PR #1846](https://github.com/faker-ruby/faker/pull/1846) Fix internet custom domain with suffix [@ngouy](https://github.com/ngouy)
+
+## Documentation
+
+- [PR #1852](https://github.com/faker-ruby/faker/pull/1852) Add YARD docs for Faker::Business. [@connorshea](https://github.com/connorshea)
+- [PR #1851](https://github.com/faker-ruby/faker/pull/1851) Add YARD docs for Faker::Crypto. [@connorshea](https://github.com/connorshea)
+- [PR #1850](https://github.com/faker-ruby/faker/pull/1850) Add YARD docs for Faker::Kpop. [@connorshea](https://github.com/connorshea)
+- [PR #1849](https://github.com/faker-ruby/faker/pull/1849) Add YARD docs for Faker::BossaNova. [@connorshea](https://github.com/connorshea)
+- [PR #1848](https://github.com/faker-ruby/faker/pull/1848) Add YARD Docs for Faker::Demographic. [@connorshea](https://github.com/connorshea)
+- [PR #1844](https://github.com/faker-ruby/faker/pull/1844) Fix yard doc in contribution [@vikas95prasad](https://github.com/vikas95prasad)
+- [PR #1802](https://github.com/faker-ruby/faker/pull/1802) Add YARD doc for Faker::Food [@sap1enza](https://github.com/sap1enza)
+- [PR #1766](https://github.com/faker-ruby/faker/pull/1766) Add YARD docs for Faker::Address [@connorshea](https://github.com/connorshea)
+
+## Refactoring
+
+- [PR #1847](https://github.com/faker-ruby/faker/pull/1847) Makes minor refactors on Internet.domain_name method [@tiagofsilva](https://github.com/tiagofsilva)
+- [PR #1772](https://github.com/faker-ruby/faker/pull/1848) Refactor Faker::Educator and add docs [@connorshea](https://github.com/connorshea)
+
+## Update local dependencies
+
+- Update rubocop requirement from = 0.76.0 to = 0.77.0 (#1843)
+
+------------------------------------------------------------------------------
+
 ## [v2.8.0](https://github.com/faker-ruby/faker/tree/v2.8.0) (2019-12-01)
 
-## Bugfixes
+## Bug/Fixes
 
 - [PR #1563](https://github.com/faker-ruby/faker/pull/1563) 
 Fix generating routing number [@psienko](https://github.com/psienko)
@@ -97,7 +125,7 @@ The following development dependencies were updated:
 
 ------------------------------------------------------------------------------
 
-## [v2.5.0](https://github.com/faker-ruby/faker/tree/v2.5.0) (2019-30-09)
+## [v2.5.0](https://github.com/faker-ruby/faker/tree/v2.5.0) (2019-09-30)
 
 This version introduces:
 - locales for Thai language - the mother language in Thailand
@@ -131,7 +159,7 @@ The following development dependencies were updated:
 
 ------------------------------------------------------------------------------
 
-## [v2.4.0](https://github.com/faker-ruby/faker/tree/v2.4.0) (2019-19-09)
+## [v2.4.0](https://github.com/faker-ruby/faker/tree/v2.4.0) (2019-09-19)
 
 ## Documentation
 
@@ -156,7 +184,7 @@ The following development dependencies were updated:
 
 ------------------------------------------------------------------------------
 
-## [v2.3.0](https://github.com/faker-ruby/faker/tree/v2.3.0) (2019-12-09)
+## [v2.3.0](https://github.com/faker-ruby/faker/tree/v2.3.0) (2019-09-12)
 
 ## Documentation
 
@@ -175,7 +203,7 @@ The following development dependencies were updated:
 
 ------------------------------------------------------------------------------
 
-## [v2.2.2](https://github.com/faker-ruby/faker/tree/v2.2.2) (2019-05-09)
+## [v2.2.2](https://github.com/faker-ruby/faker/tree/v2.2.2) (2019-09-05)
 
 ## Bug/Fixes
 
@@ -199,7 +227,7 @@ The following development dependencies were updated:
 
 ------------------------------------------------------------------------------
 
-## [v2.2.1](https://github.com/faker-ruby/faker/tree/v2.2.1) (2019-30-08)
+## [v2.2.1](https://github.com/faker-ruby/faker/tree/v2.2.1) (2019-08-30)
 
 ## Bug/Fixes
 
@@ -209,7 +237,7 @@ The following development dependencies were updated:
 
 Fixing number with one digit caused the test_insignificant_zero to fail. As it seemed that the behavior tested by test_insignificant_zero was already covered by test_number and test_decimal, we removed it to prevent duplication.
 
-## [v2.2.0](https://github.com/faker-ruby/faker/tree/v2.2.0) (2019-25-08)
+## [v2.2.0](https://github.com/faker-ruby/faker/tree/v2.2.0) (2019-08-25)
 
 ## Deprecate
 
@@ -233,7 +261,7 @@ Add deprecation warning for positional arguments to notify users that are coming
 
 ------------------------------------------------------------------------------
 
-## [v2.1.2](https://github.com/faker-ruby/faker/tree/v2.1.2) (2019-10-08)
+## [v2.1.2](https://github.com/faker-ruby/faker/tree/v2.1.2) (2019-08-10)
 
 ## Enhancements
 
@@ -243,7 +271,7 @@ Add deprecation warning for positional arguments to notify users that are coming
 
 We had to use `bundled with 1.7.3` to avoid some issues.
 
-## [v2.1.1](https://github.com/faker-ruby/faker/tree/2.1.1) (2019-10-08)
+## [v2.1.1](https://github.com/faker-ruby/faker/tree/2.1.1) (2019-08-10)
 
 ## Bug/Fixes
 
@@ -261,7 +289,7 @@ Rollback Faker::Time changes because we should expect the date format from activ
 
 ------------------------------------------------------------------------------
 
-## [v2.1.0](https://github.com/faker-ruby/faker/tree/v2.1.0) (2019-31-07)
+## [v2.1.0](https://github.com/faker-ruby/faker/tree/v2.1.0) (2019-07-31)
 
 ## Bug/Fixes
 - [PR #1675](https://github.com/faker-ruby/faker/pull/1675) Fix off-by-one error when formatting month names [@jutonz](https://github.com/jutonz)
@@ -270,7 +298,7 @@ This change required a quick release because it's a breaking issue. Every place 
 
 ------------------------------------------------------------------------------
 
-## [v2.0](https://github.com/faker-ruby/faker/tree/v2.0) (2019-31-07)
+## [v2.0](https://github.com/faker-ruby/faker/tree/v2.0) (2019-07-31)
 
 ## Important Note:
 
