@@ -1,5 +1,42 @@
 # Change Log
 
+## [v2.10.0](https://github.com/faker-ruby/faker/tree/v2.10.0) (2019-12-28)
+
+This version:
+- adds `Faker::Address.mail_box`
+- adds YARD docs
+- fix Ruby 2.7 warnings
+- adds other minor changes
+
+## Bug/Fixes
+
+- [PR #1876](https://github.com/faker-ruby/faker/pull/1876) Fix Ruby 2.7 deprecation warnings for the translate method. [@connorshea](https://github.com/connorshea)
+- [PR #1867](https://github.com/faker-ruby/faker/pull/1867) Fix tests failing on Ruby 2.7 [@connorshea](https://github.com/connorshea)
+
+## Chores
+
+- [PR #1866](https://github.com/faker-ruby/faker/pull/1866) Upgrade the Gemfile.lock to Bundler 2. [@connorshea](https://github.com/connorshea)
+
+## Documentation
+
+- [PR #1873](https://github.com/faker-ruby/faker/pull/1873) Add YARD docs for `Faker::Music{,::Opera}` [@jas14](https://github.com/jas14)
+- [PR #1862](https://github.com/faker-ruby/faker/pull/1862) Update phone number documentation [@aVigorousDev](https://github.com/aVigorousDev)
+
+## Feature Request
+
+- [PR #1875](https://github.com/faker-ruby/faker/pull/1875) Add Ruby 2.7 to the CI test matrix. [@connorshea](https://github.com/connorshea)
+- [PR #1568](https://github.com/faker-ruby/faker/pull/1568) Add `Faker::Address.mail_box` and some NZ locale updates [@mermop](https://github.com/mermop)
+
+## Refactoring
+
+- [PR #1874](https://github.com/faker-ruby/faker/pull/1874) Extract constants in `Faker::Music` [@jas14](https://github.com/jas14)
+
+## Update local dependencies
+
+Update rubocop requirement from = 0.77.0 to = 0.78.0 (#1869)
+
+------------------------------------------------------------------------------
+
 ## [v2.9.0](https://github.com/faker-ruby/faker/tree/v2.9.0) (2019-12-16)
 
 This version:
