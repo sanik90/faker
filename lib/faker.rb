@@ -9,7 +9,7 @@ end
 require 'i18n'
 require 'set' # Fixes a bug in i18n 0.6.11
 
-Dir.glob(File.join(File.dirname(__FILE__), 'helpers', '*.rb')).sort.each { |file| require file }
+Dir.glob(File.join(mydir, 'helpers', '*.rb')).sort.each { |file| require file }
 
 I18n.load_path += Dir[File.join(mydir, 'locales', '**/*.yml')]
 I18n.reload! if I18n.backend.initialized?
@@ -225,8 +225,16 @@ module Faker
         @unique ||= UniqueGenerator.new(self, max_retries)
       end
 
-      def sample(list)
-        list.respond_to?(:sample) ? list.sample(random: Faker::Config.random) : list
+      def sample(list, num = nil)
+        if list.respond_to?(:sample)
+          if num
+            list.sample(num, random: Faker::Config.random)
+          else
+            list.sample(random: Faker::Config.random)
+          end
+        else
+          list
+        end
       end
 
       def shuffle(list)
@@ -307,4 +315,4 @@ module Faker
 end
 
 # require faker objects
-Dir.glob(File.join(File.dirname(__FILE__), 'faker', '/**/*.rb')).sort.each { |file| require file }
+Dir.glob(File.join(mydir, 'faker', '/**/*.rb')).sort.each { |file| require file }
