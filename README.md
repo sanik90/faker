@@ -2,7 +2,7 @@
 ![logotype a happy-07](https://user-images.githubusercontent.com/36028424/40263395-4318481e-5b44-11e8-92e5-3dcc1ce169b3.png)
 
 # Faker
-[![Build Status](https://travis-ci.org/faker-ruby/faker.svg?branch=master)](https://travis-ci.org/faker-ruby/faker)
+[![Tests](https://github.com/faker-ruby/faker/workflows/Tests/badge.svg)](https://github.com/faker-ruby/faker/actions?query=workflow%3ATests)
 [![Gem Version](https://badge.fury.io/rb/faker.svg)](https://badge.fury.io/rb/faker)
 [![Inline docs](https://inch-ci.org/github/faker-ruby/faker.svg?branch=master)](https://inch-ci.org/github/faker-ruby/faker)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/ef54c7f9df86e965d64b/test_coverage)](https://codeclimate.com/github/stympy/faker/test_coverage)
@@ -95,7 +95,7 @@ manually set values).
 # Faker::<generator>.unique.exclude(method, arguments, list)
 
 # Add 'azerty' and 'wxcvbn' to the string generator with 6 char length
-Faker::Lorem.unique.exclude :string, [6], %w[azerty wxcvbn]
+Faker::Lorem.unique.exclude :string, [number: 6], %w[azerty wxcvbn]
 ```
 
 ### Deterministic Random
@@ -131,6 +131,7 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'mast
   - [Faker::Avatar](doc/default/avatar.md)
   - [Faker::Bank](doc/default/bank.md)
   - [Faker::Beer](doc/default/beer.md)
+  - [Faker::Blood](doc/default/blood.md)
   - [Faker::Boolean](doc/default/boolean.md)
   - [Faker::BossaNova](doc/default/bossa_nova.md)
   - [Faker::Business](doc/default/business.md)
@@ -144,6 +145,7 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'mast
   - [Faker::Commerce](doc/default/commerce.md)
   - [Faker::Company](doc/default/company.md)
   - [Faker::Compass](doc/default/compass.md)
+  - [Faker::Computer](doc/default/computer.md)
   - [Faker::Construction](doc/default/construction.md)
   - [Faker::Cosmere](doc/default/cosmere.md)
   - [Faker::Crypto](doc/default/crypto.md)
@@ -231,6 +233,7 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'mast
 
 ### Games
   - [Faker::Game](doc/games/game.md)
+  - [Faker::Games::DnD](doc/games/dnd.md)
   - [Faker::Games::Dota](doc/games/dota.md)
   - [Faker::Games::ElderScrolls](doc/games/elder_scrolls.md)
   - [Faker::Games::Fallout](doc/games/fallout.md)
@@ -243,6 +246,7 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'mast
   - [Faker::Games::Pokemon](doc/games/pokemon.md)
   - [Faker::Games::SonicTheHedgehog](doc/games/sonic_the_hedgehog.md)
   - [Faker::Games::SuperSmashBros](doc/games/super_smash_bros.md)
+  - [Faker::Games::WarhammerFantasy](doc/games/warhammer_fantasy.md)
   - [Faker::Games::Witcher](doc/games/witcher.md)
   - [Faker::Games::WorldOfWarcraft](doc/games/world_of_warcraft.md)
   - [Faker::Games::Zelda](doc/games/zelda.md)
@@ -255,6 +259,7 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'mast
 ### Movies
   - [Faker::Movie](doc/movies/movie.md)
   - [Faker::Movies::BackToTheFuture](doc/movies/back_to_the_future.md)
+  - [Faker::Movies::Departed](doc/movies/departed.md)
   - [Faker::Movies::Ghostbusters](doc/movies/ghostbusters.md)
   - [Faker::Movies::HarryPotter](doc/movies/harry_potter.md)
   - [Faker::Movies::HitchhikersGuideToTheGalaxy](doc/movies/hitchhikers_guide_to_the_galaxy.md)
