@@ -14,6 +14,20 @@ on:
     branches: [ master ]
 
 jobs:
+  lint:
+    name: Rubocop
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
+
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Run Rubocop
+        run: bundle exec rake rubocop
   test: 
     name: Ruby ${{ matrix.ruby }}
     runs-on: ubuntu-latest
@@ -21,8 +35,6 @@ jobs:
       fail-fast: false # don't fail all matrix builds if one fails
       matrix:
         ruby:
-          - '2.3' 
-          - '2.4' 
           - '2.5' 
           - '2.6' 
           - '2.7'
@@ -44,7 +56,7 @@ jobs:
         ./cc-test-reporter before-build
     
     - name: Run tests
-      run: bundle exec rake
+      run: bundle exec rake test
 
     - name: Publish code coverage
       env:
