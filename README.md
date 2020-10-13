@@ -254,6 +254,7 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'mast
   - [Faker::Games::Witcher](doc/games/witcher.md)
   - [Faker::Games::WorldOfWarcraft](doc/games/world_of_warcraft.md)
   - [Faker::Games::Zelda](doc/games/zelda.md)
+  - [Faker::Games::ClashOfClans](doc/games/clash_of_clans.md)
 
 ### Japanese Media
   - [Faker::JapaneseMedia::DragonBall](doc/japanese_media/dragon_ball.md)
@@ -262,6 +263,7 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'mast
   - [Faker::JapaneseMedia::SwordArtOnline](doc/japanese_media/sword_art_online.md)
   - [Faker::JapaneseMedia::Naruto](doc/japanese_media/naruto.md)
   - [Faker::JapaneseMedia::Doraemon](doc/japanese_media/doraemon.md)
+  - [Faker::JapaneseMedia::Conan](doc/japanese_media/conan.md)
 
 ### Movies
   - [Faker::Movie](doc/movies/movie.md)
@@ -309,6 +311,7 @@ gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'mast
   - [Faker::TvShows::DrWho](doc/tv_shows/dr_who.md)
   - [Faker::TvShows::DumbAndDumber](doc/tv_shows/dumb_and_dumber.md)
   - [Faker::TvShows::FamilyGuy](doc/tv_shows/family_guy.md)
+  - [Faker::TvShows::FinalSpace](doc/tv_shows/final_space.md)
   - [Faker::TvShows::Friends](doc/tv_shows/friends.md)
   - [Faker::TvShows::GameOfThrones](doc/tv_shows/game_of_thrones.md)
   - [Faker::TvShows::HeyArnold](doc/tv_shows/hey_arnold.md)
